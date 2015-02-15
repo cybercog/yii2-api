@@ -6,6 +6,11 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'v1' => [
+            'class' => 'app\modules\v1\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -38,6 +43,16 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => true,
+            'rules' => [
+                '' => 'site/index',
+                '<module>/<controller>/<action>' => '<module>/<controller>/<action>',
+                '<controller>/<action>' => '<controller>/<action>',
+            ],
+        ],
     ],
     'params' => $params,
 ];
