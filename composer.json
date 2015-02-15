@@ -1,8 +1,8 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Application Template",
+    "name": "xplorasia/yii2-api",
+    "description": "Yii 2 API Basic Application Template",
     "keywords": ["yii2", "framework", "basic", "application template"],
-    "homepage": "http://www.yiiframework.com/",
+    "homepage": "https://github.com/xplorasia/yii2-api",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
